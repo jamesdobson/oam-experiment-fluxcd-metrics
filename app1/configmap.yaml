@@ -1,7 +1,10 @@
+# This has an issue because the app1 configmap is in the default namespace instead of the
+# per-tenant namespace.
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: app1
+  namespace: default
   labels:
     gwcp.guidewire.com/created-by: jdobson
     gwcp.guidewire.com/dept: "275"
