@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app1
+  labels:
+    gwcp.guidewire.com/created-by: jdobson
+    gwcp.guidewire.com/dept: "275"
+    gwcp.guidewire.com/maintained-by: jdobson
+    gwcp.guidewire.com/tenant-name: ${tenant_name}
+    gwcp.guidewire.com/version: experimental
+data:
+  kepler: "is my dog"
