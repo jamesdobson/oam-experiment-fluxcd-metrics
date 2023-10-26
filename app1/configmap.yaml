@@ -13,3 +13,4 @@ metadata:
     gwcp.guidewire.com/version: experimental
 data:
   kepler: "is my dog"
+  tenant: ${tenant_name}
