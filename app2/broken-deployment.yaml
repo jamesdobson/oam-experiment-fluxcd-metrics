@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: ${tenant_name}-app2
+  labels:
+    app: nginx
+    gwcp.guidewire.com/created-by: jdobson
+    gwcp.guidewire.com/dept: "275"
+    gwcp.guidewire.com/maintained-by: jdobson
+    gwcp.guidewire.com/tenant-name: ${tenant_name}
+    gwcp.guidewire.com/version: experimental
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+        gwcp.guidewire.com/created-by: jdobson
+        gwcp.guidewire.com/dept: "275"
+        gwcp.guidewire.com/maintained-by: jdobson
+        gwcp.guidewire.com/tenant-name: ${tenant_name}
+        gwcp.guidewire.com/version: experimental
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2-broken-image-tag
+        ports:
+        - containerPort: 80
