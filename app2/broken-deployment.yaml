@@ -10,6 +10,7 @@ metadata:
     gwcp.guidewire.com/maintained-by: jdobson
     gwcp.guidewire.com/tenant-name: ${tenant_name}
     gwcp.guidewire.com/version: experimental
+    gwcp.guidewire.com/app-name: app2
 spec:
   replicas: 3
   selector:
@@ -24,6 +25,7 @@ spec:
         gwcp.guidewire.com/maintained-by: jdobson
         gwcp.guidewire.com/tenant-name: ${tenant_name}
         gwcp.guidewire.com/version: experimental
+        gwcp.guidewire.com/app-name: app2
     spec:
       containers:
       - name: nginx
